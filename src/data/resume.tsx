@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Icons } from "@/components/icons";
 import { GitBranch, HomeIcon, NotebookIcon } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
@@ -9,6 +10,33 @@ import { Csharp } from "@/components/ui/svgs/csharp";
 import { PostgresqlWordmarkDark } from "@/components/ui/svgs/postgresqlWordmarkDark";
 import { Docker } from "@/components/ui/svgs/docker";
 
+type Hackathon = {
+  title: string;
+  dates?: string;
+  location?: string;
+  description?: string;
+  image?: string;
+  links?: Array<{ href: string; title: string; icon: ReactNode }>;
+};
+
+type ProjectLink = {
+  type: string;
+  href: string;
+  icon: ReactNode;
+};
+
+type Project = {
+  title: string;
+  href: string;
+  dates: string;
+  active: boolean;
+  description: string;
+  technologies: string[];
+  links: ProjectLink[];
+  image?: string;
+  video?: string;
+};
+
 export const DATA = {
   name: "Sajjan Kumar",
   initials: "SK",
@@ -19,28 +47,29 @@ export const DATA = {
   summary:
     "I'm a B.Tech student specializing in Electronics and Communication Engineering at Maharaja Agrasen Institute of Technology. With a strong passion for software development, I have honed my skills in full-stack development and have a keen interest in AI-powered applications. I enjoy leveraging technology to create innovative solutions that address real-world challenges. I'm always eager to learn and explore new technologies.",
   avatarUrl: "/me.png",
- skills: [
-  { name: "React", icon: ReactLight },
-  { name: "Next.js", icon: NextjsIconDark },
-  { name: "TypeScript", icon: Typescript },
-  { name: "JavaScript" },
-  { name: "Node.js", icon: Nodejs },
-  { name: "PostgreSQL", icon: PostgresqlWordmarkDark },
-  { name: "Redis", },
-  { name: "Docker", icon: Docker },
-  { name: "Tailwind CSS",},
-  { name: "NGINX",  },
-  { name: "Git", icon: GitBranch},
-  { name: "C++", icon: Csharp },
- { name: "Express.js" },
- { name: "Prisma" },
-  // AI / Backend
-  { name: "Pinecone" },
+  skills: [
+    { name: "React", icon: ReactLight },
+    { name: "Next.js", icon: NextjsIconDark },
+    { name: "TypeScript", icon: Typescript },
+    { name: "JavaScript" },
+    { name: "Node.js", icon: Nodejs },
+    { name: "PostgreSQL", icon: PostgresqlWordmarkDark },
+    { name: "Redis" },
+    { name: "Docker", icon: Docker },
+    { name: "Tailwind CSS" },
+    { name: "NGINX" },
+    { name: "Git", icon: GitBranch },
+    { name: "C++", icon: Csharp },
+    { name: "Express.js" },
+    { name: "Prisma" },
+    // AI / Backend
+    { name: "Pinecone" },
 
-  // Optional
-  // { name: "BullMQ", icon: BullMQ },
-  // { name: "Redux", icon: Redux },
-],
+    // Optional
+    // { name: "BullMQ", icon: BullMQ },
+    // { name: "Redux", icon: Redux },
+  ],
+  hackathons: [] as Hackathon[],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -134,37 +163,28 @@ export const DATA = {
       image: "",
       video: "",
     },
-   {
-  title: "Easy Notes",
-  href: "",
-  dates: "2026",
-  active: true,
-  description:
-    "A browser extension that enhances YouTube learning with AI-powered summaries and timestamp-based notes. Users can capture screenshots with clickable timestamps, add comments, and make learning fast by visualizing the notes.",
-  technologies: [
-    "TypeScript",
-    "JavaScript",
-    "Redux",
-    "Groq AI",
-    "Lucide React",
-    "YouTube Captions API(3rd party)",
-    "Browser Extensions"
-  ],
-  links: [
-    // {
-    //   type: "Website",
-    //   href: "YOUR_LIVE_LINK",
-    //   icon: <Icons.globe className="size-3" />,
-    // },
     {
-      type: "GitHub",
-      href: "https://github.com/sajjannnn/easyNotes",
-      icon: <Icons.github className="size-3" />,
+      title: "Easy Notes",
+      href: "",
+      dates: "2026",
+      active: true,
+      description: "A browser extension that enhances YouTube learning with AI-powered summaries and timestamp-based notes. Users can capture screenshots with clickable timestamps, add comments, and make learning fast by visualizing the notes.",
+      technologies: ["TypeScript", "JavaScript", "Redux", "Groq AI", "Lucide React", "YouTube Captions API(3rd party)", "Browser Extensions"],
+      links: [
+        // {
+        //   type: "Website",
+        //   href: "YOUR_LIVE_LINK",
+        //   icon: <Icons.globe className="size-3" />,
+        // },
+        {
+          type: "GitHub",
+          href: "https://github.com/sajjannnn/easyNotes",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      // image: "",
+      // video: "YOUR_VIDEO_LINK",
     },
-  ],
-  // image: "",
-  // video: "YOUR_VIDEO_LINK",
-},
     {
       title: "Calorie Tracker",
       href: "https://calorie-tracker-ten-omega.vercel.app/",
@@ -232,7 +252,7 @@ export const DATA = {
       image: "",
       video: "https://personal-portfolio-asset.s3.eu-north-1.amazonaws.com/videos/Screencast+from+2026-03-07+15-30-30.mp4",
     },
-  ],
+  ] as Project[],
   // hackathons: [
   //   {
   //     title: "Hack Western 5",
