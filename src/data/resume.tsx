@@ -141,13 +141,13 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Smart Notes Hub",
+      title: "Studify",
       href: "",
       dates: "2026",
       active: true,
       description:
         "An AI-powered RAG-based study platform where students can upload PDFs/books, perform semantic search, and generate personalized notes using LLMs. The platform uses vector embeddings, asynchronous document processing, and microservices architecture to deliver scalable AI-powered learning experiences.",
-      technologies: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Pinecone", "AWS S3", "OpenAI API", "TailwindCSS", "Docker", "NGINX", "RAG", "Semantic Search"],
+      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Pinecone", "AWS S3", "Groq API", "TailwindCSS", "Docker", "NGINX", "RAG", "Semantic Search"],
       links: [
         // {
         //   type: "Website",
@@ -161,29 +161,29 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "",
+      video: "https://personal-portfolio-asset.s3.eu-north-1.amazonaws.com/videos/Screencast+from+2026-06-02+17-33-30.mp4",
     },
     {
       title: "Easy Notes",
       href: "",
       dates: "2026",
       active: true,
-      description: "A browser extension that enhances YouTube learning with AI-powered summaries and timestamp-based notes. Users can capture screenshots with clickable timestamps, add comments, and make learning fast by visualizing the notes.",
-      technologies: ["TypeScript", "JavaScript", "Redux", "Groq AI", "Lucide React", "YouTube Captions API(3rd party)", "Browser Extensions"],
+      description: "A browser extension that enhances YouTube learning with AI-powered summaries and timestamp-based notes. Users can capture screenshots with clickable timestamps, add comments, and make learning fast by visualizing the notes. Also downloads notes in pdf.",
+      technologies: ["JavaScript", "React", "Node.js", "Express", "Prisma", "PostgreSQL", "Groq AI", "AWS S3", "Tailwind CSS", "Webpack", "Vite", "Chrome Extensions (MV3)"],
       links: [
-        // {
-        //   type: "Website",
-        //   href: "YOUR_LIVE_LINK",
-        //   icon: <Icons.globe className="size-3" />,
-        // },
+        {
+          type: "Website",
+          href: "easy-notes-px1u.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "GitHub",
           href: "https://github.com/sajjannnn/easyNotes",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      // image: "",
-      // video: "YOUR_VIDEO_LINK",
+      image: "",
+      video: "https://personal-portfolio-asset.s3.eu-north-1.amazonaws.com/videos/easyNotes.mp4",
     },
     {
       title: "Calorie Tracker",
@@ -206,7 +206,7 @@ export const DATA = {
       ],
       image: "",
       video:
-        "https://personal-portfolio-asset.s3.eu-north-1.amazonaws.com/videos/Calorie_Tracker.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAYD5IPBFU3NFYA4AN%2F20260307%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260307T123701Z&X-Amz-Expires=300&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDQaCmV1LW5vcnRoLTEiRzBFAiAzZ5dbEmmu96SGHvkmeGDZskHELjE04nQlQXYKss2b6wIhAOMzYahWZtmZr4hE2ceiEA4UGFmPfkhYLRzLYQL9KITWKqYCCP7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTU4MTYyMTg0NTUzIgy%2FDhTBnYQknCb2Ka8q%2BgEG6qoLNYcEL1CFFcprG09PgZhNmPLbC%2Bnsv8%2Bh%2F5v0Iv9bgAPhbLS6c1xqDbldiiAEYI3SpYz2KaKHx2V2e%2BjfWas2ZrsRObCmB82dOFM%2BVaowPugX9tfpol1r%2F166KdK4%2FPQyRhOsmau53udwkJWV%2FvVWrVYu14kMRxUdqofGZKUpBLhZlPwtHIPU12uuuFty8mAv4CDvOrVxd%2FGGhs7Vg2CHGOswgn6Lyzv6h1Vax8ZBbJWIY7X6Ld0VQl3uz3j%2Btilir8FJxVm7E8vIdCfYHpoVp2HuKddL9tK63VaNUEYxyO%2FKLwFDqiIHXTAk7QVC2BRUaCiB3PLWMKP%2Fr80GOt8BY6fMF8q4lRJgPV1M9Q72R7EtIaGJF0fGqFW6OrVkdtRlJSZa0wavv6HYnUj9et5xQ2kRDZ1TLPGuGScVHMh1V7g8DJph1j9vKm97rDQVYnRw0n6GOuGeKjG5xZY8t6o0GzDUkZqWWR5MyI5Xdw3hqmkGhMAyyrX%2BuSu01sO4Ch1ZPJCPfH3SexsygxVmHZ241Yb5LWQuGwvkDa%2FyHT0P%2FrWPCRdDkt6b%2Bh2jPESTmKMoyASlico8uEkSMTUZEt4wKjV7Y69v6%2B3W1UforczA2wZFeqxr020JDoyCxIpGWw%3D%3D&X-Amz-Signature=cf6b2e9fa8a7da31ea08a10de2ee2d16fa8f7334cebabbe667c9eb44fceaaeb2&X-Amz-SignedHeaders=host&response-content-disposition=inline",
+        "https://personal-portfolio-asset.s3.eu-north-1.amazonaws.com/videos/Calorie_Tracker.mp4",
     },
     {
       title: "NetflixGPT",
@@ -228,7 +228,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      video: "https://personal-portfolio-asset.s3.eu-north-1.amazonaws.com/videos/netflixGPT.mp4",
     },
     {
       title: "BiteNow",
