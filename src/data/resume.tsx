@@ -173,7 +173,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "easy-notes-px1u.vercel.app",
+          href: "https://easy-notes-px1u.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
         {
